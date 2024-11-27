@@ -8,7 +8,8 @@
   --statusPending: #f7cb7375;
   --statusDone: #afd6ee75;
   --statusCancelled: #f7737375;
-  --nfButton: #5d57c9;
+  --buttonPrimary: #5d57c9;
+  --buttonSecondary: #374157;
 }
 
 * {

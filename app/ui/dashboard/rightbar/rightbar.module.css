@@ -50,7 +50,7 @@
   align-items: center;
   gap: 10px;
   width: max-content;
-  background-color: var(--nfButton);
+  background-color: var(--buttonPrimary);
   color: white;
   border: none;
   border-radius: 5px;
