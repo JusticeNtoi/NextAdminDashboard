@@ -1,23 +1,28 @@
 :root {
-    --bg: #151C2C;
-    --bgSoft: #182237;
-    --fg: white;
-    --fgSoft: #B7BAC1;
-    --hover: #2E374A;
+  --bg: #151c2c;
+  --bgSoft: #182237;
+  --bgLight: #253352;
+  --fg: white;
+  --fgSoft: #b7bac1;
+  --hover: #2e374a;
+  --statusPending: #f7cb7375;
+  --statusDone: #afd6ee75;
+  --statusCancelled: #f7737375;
+  --nfButton: #5d57c9;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--fg);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }

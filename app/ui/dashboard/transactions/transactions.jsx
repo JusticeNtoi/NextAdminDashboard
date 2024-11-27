@@ -17,18 +17,60 @@ const Transactions = () => {
         <tbody>
           <tr>
             <td>
-              <Image
-                src="/noavatar.png"
-                alt=""
-                width={40}
-                height={40}
-                className={styles.userImage}
-              />
-              John Doe
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
             </td>
             <td>
               <span className={`${styles.status} ${styles.pending}`}>
                 Pending
+              </span>
+            </td>
+            <td>12.32.2043</td>
+            <td>R2141341</td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.done}`}>Done</span>
+            </td>
+            <td>12.32.2043</td>
+            <td>R2141341</td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.cancelled}`}>
+                Cancelled
               </span>
             </td>
             <td>12.32.2043</td>
