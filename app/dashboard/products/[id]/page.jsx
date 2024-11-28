@@ -6,41 +6,37 @@ const viewProduct = () => {
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
-          <Image src="/noavatar.png" alt="" fill />
+          <Image src="/noproduct.jpg" alt="" fill />
         </div>
-          John Doe
+        Mac ProBook
       </div>
       <div className={styles.formContainer}>
         <form action="" className={styles.form}>
-          <input type="hidden" name="id" value="{user.id}" />
-          <label>Username</label>
-          <input type="text" name="username" placeholder="{user.username}" />
-          <label>Email</label>
-          <input type="email" name="email" placeholder="{user.email}" />
-          <label>Password</label>
-          <input type="password" name="password" />
-          <label>Phone</label>
-          <input type="text" name="phone" placeholder="{user.phone}" />
-          <label>Address</label>
-          <textarea type="text" name="address" placeholder="{user.address}" />
-          <label>Is Admin?</label>
-          <select name="isAdmin" id="isAdmin">
-            <option value={true} selected="{user.isAdmin}">
-              Yes
-            </option>
-            <option value={false} selected="{!user.isAdmin}">
-              No
-            </option>
+          <input type="hidden" name="id" value="{product.id}" />
+          <label>Title</label>
+          <input type="text" name="title" placeholder="{product.username}" />
+          <label>Price</label>
+          <input type="number" name="price" placeholder="{product.email}" />
+          <label>Stock</label>
+          <input type="number" name="stock" />
+          <label>Color</label>
+          <input type="text" name="color" placeholder="{product.phone}" />
+          <label>Size</label>
+          <textarea type="number" name="size" placeholder="{product.address}" />
+          <label>Category</label>
+          <select name="category" id="category">
+            <option value="general">Choose a Category</option>
+            <option value="accessories">Accessories</option>
+            <option value="phones">Phones</option>
+            <option value="computers">Computers</option>
           </select>
-          <label>Is Active?</label>
-          <select name="isActive" id="isActive">
-            <option value={true} selected="{user.isActive}">
-              Yes
-            </option>
-            <option value={false} selected="{!user.isActive}">
-              No
-            </option>
-          </select>
+          <textarea
+            required
+            name="desc"
+            id="desc"
+            rows="4"
+            placeholder="{product.desc}"
+          ></textarea>
           <button>Update</button>
         </form>
       </div>
