@@ -1,28 +1,33 @@
 import Image from "next/image";
 import styles from "../../../ui/dashboard/products/viewProduct/viewProduct.module.css";
+import { fetchProduct } from "../../../lib/data";
+import { updateProduct } from "../../../lib/actions";
 
-const viewProduct = () => {
+const viewProduct = async ({ params }) => {
+  const { id } = params;
+  const product = await fetchProduct(id);
+
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
-          <Image src="/noproduct.jpg" alt="" fill />
+          <Image src={product.img || "/noproduct.jpg"} alt="" fill />
         </div>
-        Mac ProBook
+        {product.title}
       </div>
       <div className={styles.formContainer}>
-        <form action="" className={styles.form}>
-          <input type="hidden" name="id" value="{product.id}" />
+        <form action={updateProduct} className={styles.form}>
+          <input type="hidden" name="id" value={product.id} />
           <label>Title</label>
-          <input type="text" name="title" placeholder="{product.username}" />
+          <input type="text" name="title" defaultValue={product.title} />
           <label>Price</label>
-          <input type="number" name="price" placeholder="{product.email}" />
+          <input type="number" name="price" defaultValue={product.price} />
           <label>Stock</label>
-          <input type="number" name="stock" />
+          <input type="number" name="stock" defaultValue={product.stock} />
           <label>Color</label>
-          <input type="text" name="color" placeholder="{product.phone}" />
+          <input type="text" name="color" defaultValue={product.color} />
           <label>Size</label>
-          <textarea type="number" name="size" placeholder="{product.address}" />
+          <textarea type="number" name="size" defaultValue={product.size} />
           <label>Category</label>
           <select name="category" id="category">
             <option value="general">Choose a Category</option>
@@ -35,9 +40,9 @@ const viewProduct = () => {
             name="desc"
             id="desc"
             rows="4"
-            placeholder="{product.desc}"
+            defaultValue={product.desc}
           ></textarea>
-          <button>Update</button>
+          <button type="submit">Update</button>
         </form>
       </div>
     </div>
